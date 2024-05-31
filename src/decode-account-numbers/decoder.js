@@ -15,18 +15,16 @@ const extrapolator = (asciiString) => {
     const line1 = asciiString.substring(0, 27);
     const line2 = asciiString.substring(27, 54);
     const line3 = asciiString.substring(54);
-    const lines = [line1, line2, line3];
-    const asciiDigit = lines.map((line) => line.substring(0,3));
-    asciiDigitString = asciiDigit.join('');
-    return decoder(asciiDigitString).toString();;
     
+    let asciiDigit, 
+        digitString = "";
 
+    for(let j = 0; j < 27; j+=3){
+        asciiDigit = line1.substring(j, j+3) + line2.substring(j, j+3) + line3.substring(j, j+3);
+        digitString += decoder(asciiDigit)
+    }
 
-    /*
-        newStr = str.split(''); // or newStr = [...str];
-        newStr.splice(2,5);
-        newStr = newStr.join('');
-    */
+    return digitString;
 
 };
 
@@ -36,4 +34,5 @@ module.exports = {
     extrapolator,
     decoder
 };
+
 
