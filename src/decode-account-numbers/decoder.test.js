@@ -59,13 +59,25 @@ describe('Account Decoder', () => {
             expect(extrapolator(
                     ' _  _  _  _  _  _  _  _  _ | || || || || || || || || ||_||_||_||_||_||_||_||_||_|'
                 ))
-                .toBe('0')
+                .toBe('000000000')
         });
         it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
             expect(extrapolator(
                     '    _  _     _  _  _  _  _   | _| _||_||_ |_   ||_||_|  ||_  _|  | _||_|  ||_| _|'
                 ))
                 .toBe('123456789')
+        });
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    '                             |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |'
+                ))
+                .toBe('111111111')
+        });
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _  _| _| _| _| _| _| _| _| _||_ |_ |_ |_ |_ |_ |_ |_ |_ '
+                ))
+                .toBe('222222222')
         });
     });
 });
