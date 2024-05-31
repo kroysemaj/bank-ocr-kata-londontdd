@@ -61,23 +61,77 @@ describe('Account Decoder', () => {
                 ))
                 .toBe('000000000')
         });
-        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
-            expect(extrapolator(
-                    '    _  _     _  _  _  _  _   | _| _||_||_ |_   ||_||_|  ||_  _|  | _||_|  ||_| _|'
-                ))
-                .toBe('123456789')
-        });
+        
         it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
             expect(extrapolator(
                     '                             |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |'
                 ))
                 .toBe('111111111')
         });
+        
         it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
             expect(extrapolator(
                     ' _  _  _  _  _  _  _  _  _  _| _| _| _| _| _| _| _| _||_ |_ |_ |_ |_ |_ |_ |_ |_ '
                 ))
                 .toBe('222222222')
         });
+        
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _  _| _| _| _| _| _| _| _| _| _| _| _| _| _| _| _| _| _|'
+                ))
+                .toBe('333333333')
+        });
+        
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    '                           |_||_||_||_||_||_||_||_||_|  |  |  |  |  |  |  |  |  |'
+                ))
+                .toBe('444444444')
+        });
+
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _ |_ |_ |_ |_ |_ |_ |_ |_ |_  _| _| _| _| _| _| _| _| _|'
+                ))
+                .toBe('555555555')
+        });
+
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _ |_ |_ |_ |_ |_ |_ |_ |_ |_ |_||_||_||_||_||_||_||_||_|'
+                ))
+                .toBe('666666666')
+        });
+
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |'
+                ))
+                .toBe('777777777')
+        });
+        
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _ |_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_|'
+                ))
+                .toBe('888888888')
+        });
+
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    ' _  _  _  _  _  _  _  _  _ |_||_||_||_||_||_||_||_||_| _| _| _| _| _| _| _| _| _|'
+                ))
+                .toBe('999999999')
+        });
+  
+        it('should extract a 1 and 2 as the first and second digit when passed an ASCII string', () => {
+            expect(extrapolator(
+                    '    _  _     _  _  _  _  _   | _| _||_||_ |_   ||_||_|  ||_  _|  | _||_|  ||_| _|'
+                ))
+                .toBe('123456789')
+        });
+
+        
     });
 });
