@@ -1,5 +1,5 @@
 const subject = require('./decode-account-numbers');
-const decoder = require('./decoder');
+const {decoder} = require('./decoder');
 
 const accounts = 'accounts';
 
